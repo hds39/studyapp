@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'App\Http\Controllers\Bookcontroller@index');
+Route::get('/', 'App\Http\Controllers\Bookcontroller@index')->middleware('auth');
 
 Route::post('/book', 'App\Http\Controllers\Bookcontroller@post');
 
